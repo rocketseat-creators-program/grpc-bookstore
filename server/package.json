@@ -1,0 +1,27 @@
+{
+  "name": "grpc-bookstore",
+  "version": "0.0.1",
+  "description": "Projeto final do guia inicial do gRPC",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rocketseat-experts-club/grpc-bookstore.git"
+  },
+  "keywords": [],
+  "author": "Lucas Santos <hello@lsantos.dev> (https://lsantos.dev/)",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/rocketseat-experts-club/grpc-bookstore/issues"
+  },
+  "homepage": "https://github.com/rocketseat-experts-club/grpc-bookstore#readme",
+  "dependencies": {
+    "@grpc/grpc-js": "^1.3.7",
+    "@grpc/proto-loader": "^0.6.4"
+  },
+  "devDependencies": {
+    "google-protobuf": "^3.17.3"
+  }
+}
