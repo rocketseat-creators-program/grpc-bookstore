@@ -1,6 +1,7 @@
 syntax = "proto3";
 
 import "google/protobuf/empty.proto";
+import "google/protobuf/timestamp.proto";
 
 service Bookstore {
   rpc GetBook(GetBookRequest) returns (GetBookResponse);
@@ -16,7 +17,7 @@ message Book {
   string author = 3;
   optional string image_url = 4;
   string description = 5;
-  optional int64 published_date = 6;
+  optional google.protobuf.Timestamp published_date = 6;
   optional uint32 price = 7;
   optional uint32 pages = 8;
 }
@@ -30,16 +31,17 @@ message GetBookResponse {
 }
 
 message UpdateBookRequest {
-  string id = 1;
-  message updateData {
+  string bookId = 1;
+  message UpdateData {
     optional string title = 2;
     optional string author = 3;
     optional string image_url = 4;
     optional string description = 5;
-    optional int64 published_date = 6;
+    optional google.protobuf.Timestamp published_date = 6;
     optional uint32 price = 7;
     optional uint32 pages = 8;
   }
+  UpdateData data = 2;
 }
 
 message UpdateBookResponse {
@@ -51,7 +53,16 @@ message DeleteBookRequest {
 }
 
 message CreateBookRequest {
-  Book book = 1;
+  message CreateBookData {
+    string title = 2;
+    string author = 3;
+    optional string image_url = 4;
+    optional string description = 5;
+    optional google.protobuf.Timestamp published_date = 6;
+    optional uint32 price = 7;
+    uint32 pages = 8;
+  }
+  CreateBookData book = 1;
 }
 
 message CreateBookResponse {
@@ -87,11 +98,12 @@ message GetAuthorResponse {
 
 message UpdateAuthorRequest {
   string authorId = 1;
-  message updateData {
+  message UpdateData {
     optional string name = 2;
     optional string image_url = 3;
     optional string description = 4;
   }
+  UpdateData data = 2;
 }
 
 message UpdateAuthorResponse {
@@ -107,7 +119,12 @@ message ListAuthorResponse {
 }
 
 message CreateAuthorRequest {
-  Author author = 1;
+  message AuthorCreateData {
+    string name = 2;
+    optional string image_url = 3;
+    optional string description = 4;
+  }
+  AuthorCreateData author = 1;
 }
 
 message CreateAuthorResponse {

@@ -67,6 +67,7 @@ class DB {
 
   addAuthor (author) {
     const id = crypto.createHash('sha256').update(author.name).digest('hex')
+    if (this.getAuthor(id)) throw new Error(`Author "${author.name}" already exists`)
     this.#data.authors.set(id, { ...author, id })
     return this.getAuthor(id)
   }

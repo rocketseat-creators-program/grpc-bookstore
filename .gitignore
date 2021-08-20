@@ -22,7 +22,7 @@
 ### Go Patch ###
 /vendor/
 /Godeps/
-
+pkg/
 ### Linux ###
 *~
 
