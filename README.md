@@ -1,3 +1,5 @@
+<img src="https://storage.googleapis.com/golden-wind/experts-club/capa-github.svg" />
+
 # Livraria gRPC
 
 Projeto do exemplo prático de como criar um servidor gRPC usando Node.js. Apresentado por [Lucas Santos](https://info.lsantos.dev).
@@ -11,3 +13,9 @@ Projeto do exemplo prático de como criar um servidor gRPC usando Node.js. Apres
 3. `npm start`
 
 Utilize um cliente gRPC para poder acessar o servidor na porta `50051`.
+
+## Expert
+
+| [<img src="https://github.com/khaosdoctor.png" width="75px;"/>](http://info.lsantos.dev) |
+| :-: |
+|[Lucas Santos](https://info.lsantos.dev)|
